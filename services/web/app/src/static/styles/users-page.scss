@@ -1,0 +1,103 @@
+.user-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    div#user-card {
+        height: 230px;
+        padding: 10px 20px 50px 10px;
+        display: grid;
+
+        #avatar {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            margin: 0 auto;
+            text-align: center;
+            border: 7px solid #d0d0d0;
+        }
+
+        #name {
+            padding-top: 10px;
+            margin: 0 auto;
+            text-align: center;
+            color: #3f51b5;
+            font-weight: bold;
+        }
+
+        #email {
+            margin: 0 auto;
+            text-align: center;
+            color: #afafaf;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: lowercase;
+        }
+
+        #edit-button {
+            position: relative;
+            max-width: 100px;
+            width: 100px;
+            background: #3f51b5;
+            color: #ffffff;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        #delete-button {
+            width: 100%;
+        }
+    }
+
+    #add-button {
+        color: #fff;
+        background-color: #3f51b5;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+}
+
+.user-panel {
+    width: 460px;
+
+    .title {
+        height: 10px;
+        font-size: 30px;
+        padding: 20px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .content {
+        width: 400px;
+        padding: 30px;
+        display: grid;
+        grid-gap: 20px;
+
+        .user-name {
+            display: grid;
+        }
+
+        .email {
+            display: grid;
+        }
+
+        .password {
+            display: grid;
+        }
+
+        .role {
+            display: grid;
+        }
+
+        .avatar {
+            display: grid;
+        }
+
+        .wrapper-login-button {
+            padding-top: 20px;
+            text-align: right;
+        }
+    }
+}

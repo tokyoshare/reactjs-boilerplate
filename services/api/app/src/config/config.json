@@ -1,0 +1,29 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "db_dev",
+        "host": "db",
+        "dialect": "postgres",
+        "port": "5432",
+        "operatorsAliases": false
+    },
+    "test": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "db_test",
+        "host": "db",
+        "dialect": "postgres",
+        "port": "5432",
+        "operatorsAliases": false
+    },
+    "production": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "db_prod",
+        "host": "db",
+        "dialect": "postgres",
+        "port": "5432",
+        "operatorsAliases": false
+    }
+}

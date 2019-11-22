@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  #################################################################################
+  db:
+    container_name: ${APP_NAME}-db
+    build: ./services/api/db
+    ports:
+      - '5432:5432' # expose ports - HOST:CONTAINER
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    healthcheck:
+       test: exit 0
+  #################################################################################
+  api:
+    container_name: ${APP_NAME}-api
+    build: ./services/api/
+    volumes:
+      - ./services/api/app:/usr/src/app:rw
+    ports:
+      - '3001:3000' # expose ports - HOST:CONTAINER
+    environment:
+      - DB_HOST=db #check in the api/src/models/index.js
+      - PORT=3000
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=${TOKEN_SECRET}
+    depends_on:
+      - "db"
+    links:
+      - db
+  #####################################################################################
+  web:
+    container_name: ${APP_NAME}-web
+    build: ./services/web/
+    volumes:
+      - ./services/web/app:/usr/src/app:rw
+      - '/usr/src/app/node_modules'
+    ports:
+      - '80:8000' # expose ports - HOST:CONTAINER
+    environment:
+      - API_URL=${API_URL}
+      - TOKEN_SECRET=${TOKEN_SECRET}
+      - STORAGE_SECRET_KEY=${STORAGE_SECRET_KEY}
+      - NODE_ENV=${NODE_ENV}
+    networks:
+      - default
+    # depends_on:
+    #   - "api"
+    # links:
+    #   - api

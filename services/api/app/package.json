@@ -1,0 +1,53 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API",
+  "scripts": {
+    "start": "nodemon ./src/server.js --exec babel-node",
+    "test": "./node_modules/mocha/bin/_mocha 'tests/**/*.test.js'",
+    "migrate": "sequelize db:migrate && sequelize db:seed:all"
+  },
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.15.2",
+    "morgan": "~1.8.1",
+    "mysql2": "^1.5.3",
+    "parse-error": "^0.2.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^5.5.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "mocha": "^3.5.3",
+    "mocha-co": "^1.17.2",
+    "nodemon": "^1.18.9"
+  },
+  "author": "Ho Quoc Huy",
+  "license": "ISC"
+}
