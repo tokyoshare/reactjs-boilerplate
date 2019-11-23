@@ -52,7 +52,7 @@ role: DataTypes.INTEGER
 
 ### EndPoints
 
-##### 1. Front End- http://localhost:8001
+##### 1. Front End- http://localhost:80
 
 | Endpoint | Accessable | Result                            |
 | -------- | ---------- | --------------------------------- |
