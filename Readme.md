@@ -28,7 +28,7 @@ $ docker-compose up -d
 
 | Name      | Folder          | Container | Tech                                       |
 | --------- | --------------- | --------- | ------------------------------------------ |
-| Web       | services/web    | XXX-web   | React, React-Redux, Material-UI, CK-Editor |
+| Web       | services/web    | XXX-web   | React, React-Redux, Material-UI            |
 | Users API | services/api    | XXX-api   | Node, Express                              |
 | User DB   | services/api/db | XXX-db    | PostgreSQL                                 |
 **[XXX] is app name, setting in `.env` file**
