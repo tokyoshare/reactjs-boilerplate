@@ -26,7 +26,7 @@
     "pg-hstore": "^2.3.3",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
-    "sequelize": "^4.38.0",
+    "sequelize": "^5.15.1",
     "sequelize-cli": "^5.5.0",
     "uuid": "^3.3.2"
   },
